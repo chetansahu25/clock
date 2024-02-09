@@ -30,8 +30,8 @@ main{
     position: absolute;
     left: 49.3%;
     z-index: 5;
-    height: 4vmin;
-    width: 4vmin;
+    height: 5vmin;
+    width: 5vmin;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
 }
