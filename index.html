@@ -8,17 +8,40 @@
 </head>
 <body>
     <main>
-        <div class="clock-container">
+        <div id="clock-container"  class="flex">
             <div class="clock">
                 <img src="images/clock.jpg" alt="simple clock without hands" class="clock-img">
             </div>            
             <img id="seconds" class="center-pin" src="images/seconds-hand.svg" alt="seconds-hand">
             <img id="hour" class="center-pin" src="images/hour-hand.svg" alt="hour-hand">
             <img id="minute" class="center-pin" src="images/minute-hand.svg" alt="minute hand">
+            <div class="point"></div>
             
         </div>
-        <div class="point"></div>
+        <div id="digital-clock-container" class="flex display-toggle">
+            <img class="png-elements one" src="./images/1.png" alt="">
+            <img class="png-elements two" src="./images/2.png" alt="">
+            <img class="png-elements three" src="./images/3.svg" alt="">
+            <img class="png-elements four" src="./images/4.png" alt="">
+            <img class="png-elements" src="./images/5.png" alt="">
+
+            <div id="digital-clock">
+                <span id="digital-hour" class="timer"></span>
+                <span id="digital-minutes" class="timer"></span>
+                <span id="digital-seconds" class="timer"></span>
+                <span class="ampm-indicator timer">AM</span>
+
+                <div class="extra-info">             
+                </div>
+            </div>
+            
+        </div>
+
+        <button id="layout-change" onclick="changeLayout()">
+            <img src="./images/change.svg" >
+        </button>
     </main>
-    <script src="main.js"></script>
+    
 </body>
+<script src="main.js"></script>
 </html>

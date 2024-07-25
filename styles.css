@@ -1,32 +1,39 @@
-*{
+* {
     padding: 0;
     margin: 0;
-}
-
-.clock-container{
+  }
+  
+  #clock-container {
+    height: 100vh;
+    margin: auto;
+    
+  }
+  .flex {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-
-    
-}
-.clock{
+  }
+  .clock {
     justify-content: center;
     align-items: center;
     width: 80vmin;
-}
-main{
+  }
+  main {
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-}
-.clock-img{ 
+    width: 100vw;
+  }
+  @keyframes changeBg {
+    0% {
+      background-position: left;
+    }
+    100% {
+      background-position: right;
+    }
+  }
+  .clock-img {
     width: 98vmin;
-}
-.point{
+  }
+  .point {
     position: absolute;
     left: 49.3%;
     z-index: 5;
@@ -34,28 +41,143 @@ main{
     width: 5vmin;
     background-color: rgb(0, 0, 0);
     border-radius: 50%;
-}
-#hour{
+  }
+  #hour {
     transform-origin: 49% 78.8%;
     height: 35vmin;
     position: relative;
     right: 41vmin;
     top: -10vmin;
-}
-#seconds{
-    
+  }
+  #seconds {
     transform-origin: 56.3% 96.8%;
     height: 42vmin;
     position: relative;
     right: 35vmin;
     top: -20vmin;
-
-}
-#minute{
+  }
+  #minute {
     transform-origin: 56% 84%;
     height: 38vmin;
-
     position: relative;
     top: -13vmin;
     right: 45.6vmin;
-}
+  }
+  #layout-change {
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+  }
+  
+  button img{
+    width: 50px;
+    animation: blink 0.5s ease-in 2s 20 alternate;
+    fill: #89216b;
+  }
+  button img:hover{
+    animation: none;
+  
+  }
+  
+  @keyframes blink{
+    from{
+      fill: #da4453;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    to{
+      fill: cornflowerblue;
+      position: fixed;
+      bottom: 30px;
+      right: 20px;
+    }
+  }
+  /* ############### Digital Clock Design ############### */
+  #digital-clock-container {
+    height: 100vh;
+    width: 100vw;
+    background: #da4453; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      #89216b,
+      #da4453
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      #89216b,
+      #da4453
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  }
+  #digital-clock {
+    width: 900px;
+    height: 250px;
+    background: rgba(0, 0, 0, 0.15);
+    box-shadow: 3px 3px 20px rgb(49, 48, 48);
+    align-items: start;
+    border-radius: 15px;
+    margin: auto;
+    text-align: center;
+    z-index: 4;
+  }
+  
+  .display-toggle {
+    display: none;
+  }
+  
+  .timer {
+    display: inline-block;
+    font-size: 160px;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+  }
+  .extra-info {
+    color: white;
+  }
+  
+  .png-elements{
+    height: 250px;
+    position: absolute;
+  
+  }
+  
+  .png-elements:nth-child(1){
+  
+    top: 5%;
+    left: 15%;
+  
+  }
+  .png-elements:nth-child(2){
+  
+    top: 5%;
+    Right: 5%;
+  
+  }
+  .png-elements:nth-child(3){
+  
+    top: 60%;
+    right: 8%;
+  
+  }
+  .png-elements:nth-child(4){
+  
+    bottom: 5%;
+    left: 5%;
+  
+  }
+  .png-elements:nth-child(5){
+  
+    bottom: 15%;
+    left: 50%;
+  
+  }
+  span.ampm-indicator.timer{
+    font-size: 30px;
+  
+  }
